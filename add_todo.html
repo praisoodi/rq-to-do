@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo Form</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+  <h2>Add Todo</h2>
+  <form action="submit-todo.php" method="POST">
+    <!-- Todo task input -->
+    <label for="todo">Todo:</label>
+    <input type="text" id="todo" name="todo" required>
+    <br><br>
+
+    <!-- Category dropdown -->
+    <label for="category">Category:</label>
+    <select id="category" name="category_id" required>
+      <!-- These options would typically be generated dynamically with server-side code -->
+      <option value="1">Work</option>
+      <option value="2">Personal</option>
+      
+    </select>
+    <br><br>
+    <label>Description (optional):</label><br>
+    <textarea name="description" rows="4" cols="50" placeholder="Enter details about your task..."></textarea><br><br>
+    <label>Due Date (optional):</label><br> 
+    <input type="date" name="due_date"><br><br>
+    <label>
+    <input type="checkbox" name="is_completed" value="1">
+    Mark as Completed
+    </label><br><br>
+
+
+
+
+    <!-- Submit button -->
+    <button type="submit">Add Todo</button>
+  </form>
+  <br>
+  <form action="read-todos.php" method="GET">
+    <button type="submit">Read Todos</button>
+  </form>
+
+</body>
+</html>
